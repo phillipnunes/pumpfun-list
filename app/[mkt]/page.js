@@ -29,7 +29,7 @@ export default function Home({params}) {
           );
         } else {
           // Add new coin if market cap exceeds threshold and not present
-          setDataSource((prevState) => [...prevState, { ...response }]);
+          setDataSource((prevState) => [{ ...response }, ...prevState ]);
         }
       }
     });
